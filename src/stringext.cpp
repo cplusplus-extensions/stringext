@@ -3,7 +3,7 @@
 
 /**
  * @brief This library's purspose is to provide the programmer with additional potentially useful functions that can be used on strings.
- * You are free to suggest any improvement in the "Discussions" page or in the "Issues" page, provided you also give a working example
+ * You are free to suggest any improvement in the "Discussions" page or in the "Issues" page, provided that you also give a working example
  * to explain how you are solving the problem!
  */
 
