@@ -14,11 +14,11 @@
  * @param delim The delimiter used to split the string
  * @return std::vector<std::string> The resulting vector as described above.
  */
-std::vector<std::string> split(const std::string& str, const char& delim) noexcept {
+std::vector<std::string> split(const std::string& str, const std::string& delim) noexcept {
     std::string str1;
     std::vector<std::string> v;
     for(const char& it : str) {
-        if(it != delim) {
+        if(delim.find(it) == std::string::npos) {
             str1 += it;
         } else {
             v.push_back(str1);
