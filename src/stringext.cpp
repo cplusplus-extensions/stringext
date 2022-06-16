@@ -29,3 +29,15 @@ std::vector<std::string> split(const std::string& str, const std::string& delim)
 
     return v;
 }
+
+/**
+ * @brief This function joins two strings into one resulting string.
+ * 
+ * @param v1 The first string
+ * @param v2 The second string
+ */
+void join(std::string& v1, const std::string& v2) noexcept {
+    for(const auto& i: v2) {
+        v1.push_back(i);
+    }
+}
