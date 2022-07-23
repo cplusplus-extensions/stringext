@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include "stringext.h"
 
 /**
  * @brief This library's purpose is to provide the programmer with additional potentially useful functions that can be used on strings.
@@ -9,8 +7,6 @@
  */
 
 #if __cplusplus >= 201703L
-#include <string_view>
-
 /**
  * @brief This function joins two strings into one resulting string, appending every character in the second string to the end of the first string.
  * 
@@ -33,11 +29,11 @@ void join(std::string& v1, const std::string& v2) noexcept {
  * @param delim The delimiter used to split the string
  * @return std::vector<std::string> The resulting vector as described above.
  */
-std::vector<std::string> split(const std::string& str, const std::string& delim) noexcept {
+std::vector<std::string_view> split(const std::string_view& str, const std::string_view& delim) noexcept {
     std::string str1;
-    std::vector<std::string> v;
+    std::vector<std::string_view> v;
     std::for_each(str.begin(), str.end(), [&v, &str1, delim](char it) {
-        if(delim.find(it) == std::string::npos) {
+        if(delim.find(it) == std::string_view::npos) {
             str1.push_back(it);
         } else {
             v.push_back(str1);
